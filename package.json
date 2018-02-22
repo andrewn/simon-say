@@ -1,0 +1,14 @@
+{
+  "name": "simon-say",
+  "version": "0.0.1",
+  "description": "An implementation of SSIP for macOS",
+  "bin": {
+    "simon-say": "bin/simon-say.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["macos", "speech", "say", "ssip", "speech-dispatcher"],
+  "author": "Andrew Nicolaou <me@andrewnicolaou.co.uk>",
+  "license": "Apache-2"
+}
