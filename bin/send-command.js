@@ -3,11 +3,11 @@
 const net = require("net");
 const readline = require("readline");
 
-const { getSocketPath } = require("../lib/environment");
+const { getConnectionConfig } = require("../lib/environment");
 const { formatMessage } = require("../lib/protocol/format");
 
 const main = async () => {
-  const socket = net.createConnection(getSocketPath());
+  const socket = net.createConnection(getConnectionConfig());
   socket.on("data", data => {
     console.log(data.toString());
   });

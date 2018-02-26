@@ -2,12 +2,10 @@
 
 const connect = require("../lib/connect");
 const Protocol = require("../lib/protocol");
-const { getSocketPath } = require("../lib/environment");
-
-const socketPath = getSocketPath();
+const { getConnectionConfig } = require("../lib/environment");
 
 const main = async () => {
-  const connections = await connect({ socketPath });
+  const connections = await connect(getConnectionConfig());
 
   connections.on("connection", connection => {
     console.log("Client connected");

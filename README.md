@@ -27,6 +27,14 @@ Or you can install locally:
 
 ## Usage
 
+Start the server listening on port `12345` using the command:
+
+    SOCKET_PORT=12345 simon-say
+
+Start the server listening on host `0.0.0.0` and port `12345` using the command:
+
+    SOCKET_HOST=0.0.0.0 SOCKET_PORT=12345 simon-say
+
 Start the server listening on the socket path `/tmp/speechd.sock` use the command:
 
     SOCKET_PATH=/tmp/speechd.sock simon-say
