@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-const log = require("debug")("simon-say:main");
-
+const log = require("../lib/logger")("simon-say:main");
 const connect = require("../lib/connect");
 const Protocol = require("../lib/protocol");
 const { getConnectionConfig } = require("../lib/environment");
@@ -11,7 +10,7 @@ const main = async () => {
   connections.on("connection", connection => {
     log("Client connected");
 
-    connection.on("disconnection", () => console.log("Client disconnected"));
+    connection.on("disconnection", () => log("Client disconnected"));
 
     const protocol = new Protocol(connection);
   });
