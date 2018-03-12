@@ -1,6 +1,6 @@
 {
   "name": "simon-say",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An implementation of SSIP for macOS",
   "bin": {
     "simon-say": "bin/simon-say.js"
