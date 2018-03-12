@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const log = require("debug")("simon-say:main");
 
 const connect = require("../lib/connect");
 const Protocol = require("../lib/protocol");
@@ -8,7 +9,7 @@ const main = async () => {
   const connections = await connect(getConnectionConfig());
 
   connections.on("connection", connection => {
-    console.log("Client connected");
+    log("Client connected");
 
     connection.on("disconnection", () => console.log("Client disconnected"));
 
@@ -16,7 +17,7 @@ const main = async () => {
   });
 
   const gracefulExit = signal => () => {
-    console.log(`Received ${signal}. Exiting...`);
+    log(`Received ${signal}. Exiting...`);
     connections.close();
   };
 
