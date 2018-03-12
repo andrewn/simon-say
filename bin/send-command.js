@@ -2,6 +2,7 @@
 
 const net = require("net");
 const readline = require("readline");
+const log = require("debug")("send-command:main");
 
 const { getConnectionConfig } = require("../lib/environment");
 const { formatMessage } = require("../lib/protocol/format");
@@ -9,7 +10,7 @@ const { formatMessage } = require("../lib/protocol/format");
 const main = async () => {
   const socket = net.createConnection(getConnectionConfig());
   socket.on("data", data => {
-    console.log(data.toString());
+    log(data.toString());
   });
 
   socket.on("close", () => process.exit());

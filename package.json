@@ -8,7 +8,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["macos", "speech", "say", "ssip", "speech-dispatcher"],
+  "keywords": [
+    "macos",
+    "speech",
+    "say",
+    "ssip",
+    "speech-dispatcher"
+  ],
   "author": "Andrew Nicolaou <me@andrewnicolaou.co.uk>",
-  "license": "Apache-2"
+  "license": "Apache-2",
+  "dependencies": {
+    "async": "^2.6.0",
+    "debug": "^3.1.0"
+  }
 }
