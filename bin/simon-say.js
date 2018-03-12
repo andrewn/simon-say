@@ -16,8 +16,11 @@ const main = async () => {
     const protocol = new Protocol(connection);
   });
 
-  const gracefulExit = signal => () => {
+  const gracefulExit = signal => err => {
     log(`Received ${signal}. Exiting...`);
+    if (err) {
+      log("Error:", err);
+    }
     connections.close();
   };
 
