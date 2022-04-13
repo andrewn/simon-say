@@ -18,7 +18,7 @@
   "author": "Andrew Nicolaou <me@andrewnicolaou.co.uk>",
   "license": "Apache-2",
   "dependencies": {
-    "async": "^2.6.0",
+    "async": "^3.2.2",
     "debug": "^3.1.0"
   }
 }
